@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="searchBar.css">
+    <link rel="stylesheet" href="https://ka-f.webawesome.com/webawesome@3.10.0/styles/themes/default.css">
+    <script type="module" src="https://ka-f.webawesome.com/webawesome@3.10.0/webawesome.loader.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <!-- START - HEADER NAVIGATION BAR -->
+    <header id="headerNav">
+        <div id="headerNavContainer" class="header-nav__container ">
+
+            <a href="homepage.html" class="header-nav__agent-logo">
+                <img src="PJEstates.png" alt="Agent-Logo">
+            </a>
+
+            <input 
+                type="text" 
+                id="searchBar" 
+                class="header-nav__search-bar" 
+                placeholder="Search by address, city or ZIP..."
+            >
+            <div id="searchBarCloseButton"><i class="fa-solid fa-xmark"></i></div>
+
+            <div class="header-nav__btns">
+                <p id="homeSearchBtn" class="header-nav__search-btn header-nav__btn">
+                    Home Search
+                </p>
+
+                <a href="tel:+639208983562" class="header-nav__contact-btn header-nav__btn">
+                    Contact
+                </a>
+            </div>
+
+        </div>
+    </header>
+
+    <div class="searchBarResults" id="results"></div>
+    <!-- END - HEADER NAVIGATION BAR -->
+     
+     <!-- START - HERO SECTION -->
+    <section id="heroOpeningSection" class="hero-opening__container">
+        <div class="hero-opening-text__container">
+            <h1>Best Properties in Sacramento</h1>
+            <p>Sacramento real estate market | 30+ listings</p>
+        </div>
+        <a href="properties.html" class="light-button">Properties</a>
+    </section>
+    <!-- END - HERO SECTION -->
+
+     <!-- START - BIO SECTION -->
+    <section id="bioSection">
+        <div class="bio-section__image-container bio-section__col">
+            <img src="bio-img.png" alt="">
+        </div>
+        <div class="bio-section__text-container bio-section__col">
+            <p class="pre-title">Your Trusted Sacramento Real Estate Agent</p>
+            <h3>Peter John Reyes</h3>
+            <p>CA DRE# 12345678</p>
+            <p class="bio-section__agent-bio">Hi, I'm Peter, a dedicated real estate professional proudly serving Sacramento and the surrounding communities. Whether you're buying your first home, upgrading to your dream home, or investing in real estate, I'm committed to making the process smooth and stress-free. With a deep appreciation for Sacramento's diverse neighborhoods, growing market, and vibrant lifestyle, I focus on helping clients find properties that match their goals and budget. My priority is providing honest guidance, responsive communication, and exceptional service from start to finish.</p>
+        </div>
+    </section>
+    <!-- END - BIO SECTION -->
+
+     <!-- START - FEATURED PROPERTIES SECTION -->
+    <section id="featuredPropertiesSection">
+        <div class="featured-property__header-container">
+            <h3>Featured Properties</h3>
+            <div class="featured-property-slider__container">
+                <div id="leftSlider" class="featured-property__slider left-slider">
+                    <i class="fa-solid fa-angle-right"></i>
+                </div>
+                <div id="rightSlider" class="featured-property__slider right-slider">
+                    <i class="fa-solid fa-angle-right"></i>
+                </div>
+            </div>
+        </div>
+        
+        <div class="featured-property__card-container" id="cardsContainer"></div>
+        <a href="properties.html" class="dark-button">View All</a>
+    </section>
+    <!-- END - FEATURED PROPERTIES SECTION -->
+
+    <!-- START - FOOTER -->
+    <footer id="footerNav">
+        <h3>Peter John Reyes</h3>
+        <div class="footer-contact__details-container">
+            <div class="footer-contact__detail">
+                <p><strong>EMAIL</strong></p>
+                <a href="mailto:peter.john.reyes0326@gmail.com" class="link">peter.john.reyes0326@gmail.com</a>
+            </div>
+            <div class="footer-contact__detail">
+                <p><strong>PHONE</strong></p>
+                <a href="tel:+639208983562" class="link">(+63) 920-898-3562</a>
+            </div>
+            <div class="footer-disclaimer__container">
+                <p>All information is deemed reliable but not guaranteed and should be independently reviewed and verified.</p>
+                <img src="realtor ehp.png" alt="realtor eho logo">
+            </div>
+            
+
+        </div>
+    </footer>
+    <!-- END - FOOTER -->
+
+    <script src="searchBar.js"></script>
+    <script src="homepageScript.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,26 @@
+#results{
+    background-color: var(--white);
+    position: absolute;
+    width: 100%;
+    max-width: 580px;
+    left: calc(50% - 265px);
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
+    border-radius: 0 0 8px 8px;
+    z-index: 100;
+    @media(max-width: 560px){
+        left: unset;
+        width: calc(100% - 40px);
+        min-width: calc(100% - 40px);
+        margin-inline: 20px;
+    }
+}
+
+.search-result{
+    transition: 0.3s;
+    padding-inline: 8px;
+    padding-block: 8px;
+    &:hover{
+        background-color: #eeebee;
+        opacity: 0.9;
+    }
+}

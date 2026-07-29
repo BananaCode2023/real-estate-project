@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="propertyInfo.css">
+    <link rel="stylesheet" href="searchBar.css">
+    <link rel="stylesheet" href="https://ka-f.webawesome.com/webawesome@3.10.0/styles/themes/default.css">
+    <script type="module" src="https://ka-f.webawesome.com/webawesome@3.10.0/webawesome.loader.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <!-- START - HEADER NAVIGATION BAR -->
+    <header id="headerNav">
+        <div id="headerNavContainer" class="header-nav__container ">
+
+            <a href="homepage.html" class="header-nav__agent-logo">
+                <img src="PJEstates.png" alt="Agent-Logo">
+            </a>
+
+            <input 
+                type="text" 
+                id="searchBar" 
+                class="header-nav__search-bar" 
+                placeholder="Search by address, city or ZIP..."
+            >
+            <div id="searchBarCloseButton"><i class="fa-solid fa-xmark"></i></div>
+
+            <div class="header-nav__btns">
+                <p id="homeSearchBtn" class="header-nav__search-btn header-nav__btn">
+                    Home Search
+                </p>
+
+                <a href="tel:+639208983562" class="header-nav__contact-btn header-nav__btn">
+                    Contact
+                </a>
+            </div>
+
+        </div>
+    </header>
+
+    <div class="searchBarResults" id="results"></div>
+    <!-- END - HEADER NAVIGATION BAR -->
+     
+     <!-- START - PROPERTY IMAGE SECTION -->
+    <section id="propertyImageSection" class="property-image__section">
+        <div id="propertyImageViewer"></div>
+        <div class="property-slider__container">
+            <div id="leftImageSlider" class="property__slider left-slider">
+                <i class="fa-solid fa-angle-right"></i>
+            </div>
+            <div id="rightImageSlider" class="property__slider right-slider">
+                <i class="fa-solid fa-angle-right"></i>
+            </div>
+        </div>
+        <a href="properties.html" class="back-to-properties-page"><i class="fa-solid fa-arrow-left"></i> Back to Properties List</a>
+    </section>
+    <div id="propertyImagemodal">
+        <div id="propertyImageModalImage">
+            <div id="closeButton"><i class="fa-solid fa-xmark"></i></div>
+            <img src="" alt="" id="propertyImage">
+        </div>
+    </div>
+    <!-- END - PROPERTY IMAGE SECTION -->
+
+    <!-- START - PROPERTY DETAILS SECTION -->
+    <section id="propertyDetails" class="property-details__section">
+        <div class="property-details__row">
+            <h3 id="propertyDetailsAddressName"></h3>
+            <p class="sub-title" id="propertyDetailsAddressCity"></p>
+            <div class="property-tags__container">
+                <div class="property__tags" id="propertyStatus"></div>
+                <div class="property__tags" id="propertyType"></div>
+            </div>
+        </div>
+        <div class="property-details__row">
+            <h2 id="propertyDetailsPrice" class="property-details__price">$123,000</h2>
+        </div>
+    </section>
+    <!-- END - PROPERTY DETAILS SECTION -->
+
+    <!-- START - PROPERTY INFO -->
+    <!-- START - PROPERTY HIGHLIGHTS -->
+    <section id="propertyInfoContainer" class="property-info__container">
+        <section id="propertyHighlights" class="property-highlights__container">
+            <h5>PROPERTY HIGHLIGHTS</h5>
+            <div class="property-highlights-features__container">
+                <div class="property-feature">
+                   <h4 id="propertyBedroomsInfo"></h4>
+                   <p id="propertyBedroomsSubtitle" class="sub-title">Bedrooms</p>
+                </div>
+                <div class="property-feature">
+                   <h4 id="propertyBathroomsInfo"></h4>
+                   <p id="propertyBathroomsSubtitle" class="sub-title">Bathrooms</p>
+                </div>
+                <div class="property-feature">
+                   <h4 id="propertySqfeetInfo"></h4>
+                   <p id="propertySqfeetSubtitle" class="sub-title">Sq. Feet</p>
+                </div>
+                <div class="property-feature">
+                   <h4 id="propertyYearBuiltInfo"></h4>
+                   <p id="propertyYearBuiltSubtitle" class="sub-title">Year Built</p>
+                </div>
+            </div>
+
+            <div class="property-highlights-agent-info__container">
+                <div class="listing-agent-info__container">
+                    <h5>LISTING AGENT</h5>
+                    <div class="listing-agent-details__container">
+                        <div class="agent-details__container">
+                            <div class="agent-image">
+                                <img src="image 5.png" alt="">
+                            </div>
+                            <div class="agent-details">
+                                <p class="agent-name" id="agentName">Listing Agent Name</p>
+                                <p class="agent-position">Real Estate Agent</p>
+                                <p class="agent-license" id="agentLicense">CA DRE# 12345678</p>
+                            </div>
+                        </div>
+                        <div class="listing-agent-contact-points__container">
+                            <div class="contact-point">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div class="contact-point">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div class="contact-point">
+                                <img src="image 8.png" alt="zillow-logo">
+                            </div>
+                        </div>
+                    </div>
+                    <button class="agent-contact">Contact Agent</button>
+                </div>
+                <div class="request-agent-detail__container">
+                    <h5>REQUEST MORE INFO</h5>
+                    <div class="request-details-form__container">
+                        <div class="lead-details-form__container">
+                            <input type="text" name="Name" id="name" placeholder="Your Name">
+                            <input type="text" name="Email" id="email" placeholder="Email Address">
+                            <input type="number" name="Number" id="number" placeholder="Phone Number">
+                        </div>
+                        <textarea placeholder="Message" id="message"></textarea>
+                        </textarea>
+                        <button class="send-request__btn">Send Request</button>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    <!-- END - PROPERTY HIGHLIGHTS -->
+        <!-- START - PROPERTY DESCRIPTION -->
+        <section class="property-description__section" id="propertyDescriptionSection"> 
+            <h5>PROPERTY DESCRIPTION</h5>
+            <p id="propertyDescription"></p>
+        </section>
+        <!-- END - PROPERTY DESCRIPTION -->
+         
+        <!-- START - INTERIOR DETAILS -->
+        <section class="interior-details__section" id="interiorDetailsSection">
+            <h5>Interior Details</h5>
+            <div class="interior-details-cards__container">
+                <div id="bedroomBathroomInterior" class="interior-detail">
+                    <p class="interior-detail-title">Bedrooms & Bathrooms</p>
+                    <p id="bedroomBathroomInteriorInfo">
+                        
+                    </p>
+                </div>
+                <div id="roomsInterior" class="interior-detail">
+                    <p class="interior-detail-title">Rooms</p>
+                    <p id="roomsInteriorInfo">
+                    </p>
+                </div>
+                <div id="bedroomInterior" class="interior-detail">
+                    <p class="interior-detail-title">Bedroom</p>
+                    <p id="bedroomInteriorInfo">
+                    </p>
+                </div>
+                <div id="bathroomInterior" class="interior-detail">
+                    <p class="interior-detail-title">Bathroom</p>
+                    <p id="bathroomInteriorInfo">
+                    </p>
+                </div>
+                <div id="diningRoomInterior" class="interior-detail">
+                    <p class="interior-detail-title">Dining Room</p>
+                    <p id="diningRoomInteriorInfo">
+                    </p>
+                </div>
+                <div id="kitchenInterior" class="interior-detail">
+                    <p class="interior-detail-title">Kitchen</p>
+                    <p id="kitchenInteriorInfo">
+                    </p>
+                </div>
+                <div id="heatingInterior" class="interior-detail">
+                    <p class="interior-detail-title">Heating</p>
+                    <p id="heatingInteriorInfo">
+                    </p>
+                </div>
+                <div id="coolingInterior" class="interior-detail">
+                    <p class="interior-detail-title">Cooling</p>
+                    <p id="coolingInteriorInfo">
+                    </p>
+                </div>
+                <div id="appliancesInterior" class="interior-detail">
+                    <p class="interior-detail-title">Appliances</p>
+                    <p id="appliancesInteriorInfo">
+                    </p>
+                </div>
+                <div id="featuresInterior" class="interior-detail">
+                    <p class="interior-detail-title">Features</p>
+                    <p id="featuresInteriorInfo">
+                    </p>
+                </div>
+                <div id="interiorAreaInterior" class="interior-detail">
+                    <p class="interior-detail-title">Interior Area</p>
+                    <p id="interiorAreaInteriorInfo">
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- END - INTERIOR DETAILS -->
+
+        <!-- START - ADDITIONAL DETAILS -->
+        <section class="additional-details__section" id="additionalDetailsSection">
+            <h5>Additional Details</h5>
+            <div class="additional-details-cards__container">
+                <div id="parkingAdditional" class="additional-detail">
+                    <p class="additional-detail-title">Parking</p>
+                    <p id="parkingAdditionalInfo">
+                    </p>
+                </div>
+                <div id="accessibilityAdditional" class="additional-detail">
+                    <p class="additional-detail-title">Accessibility</p>
+                    <p id="accessibilityAdditionalInfo">
+                    </p>
+                </div>
+                <div id="featuresAdditional" class="additional-detail">
+                    <p class="additional-detail-title">Features</p>
+                    <p id="featuresAdditionalInfo">
+Pool features: In Ground
+                    </p>
+                </div>
+                <div id="lotAdditional" class="additional-detail">
+                    <p class="additional-detail-title">Lot</p>
+                    <p id="lotAdditionalInfo">
+                    </p>
+                </div>
+                <div id="detailsAdditional" class="additional-detail">
+                    <p class="additional-detail-title">Details</p>
+                    <p id="detailsAdditionalInfo">
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- END - ADDITIONAL DETAILS -->
+
+        <!-- START - FEATURED PROPERTIES SECTION -->
+        <section id="featuredPropertiesSection">
+            <div class="featured-property__header-container">
+                <h3>Featured Properties</h3>
+                <div class="featured-property-slider__container">
+                    <div id="leftSliderArrow" class="featured-property__slider left-slider">
+                        <i class="fa-solid fa-angle-right"></i>
+                    </div>
+                    <div id="rightSliderArrow" class="featured-property__slider right-slider">
+                        <i class="fa-solid fa-angle-right"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="featured-property__card-container" id="cardsContainer"></div>
+            <a href="properties.html" class="dark-button">View All</a>
+        </section>
+        <!-- END - FEATURED PROPERTIES SECTION -->
+    </section>
+    <!-- END - PROPERTY INFO -->
+
+    
+
+
+    <!-- START - FOOTER -->
+    <footer id="footerNav">
+        <h3>Peter John Reyes</h3>
+        <div class="footer-contact__details-container">
+            <div class="footer-contact__detail">
+                <p><strong>EMAIL</strong></p>
+                <a href="mailto:peter.john.reyes0326@gmail.com" class="link">peter.john.reyes0326@gmail.com</a>
+            </div>
+            <div class="footer-contact__detail">
+                <p><strong>PHONE</strong></p>
+                <a href="tel:+639208983562" class="link">(+63) 920-898-3562</a>
+            </div>
+            <div class="footer-disclaimer__container">
+                <p>All information is deemed reliable but not guaranteed and should be independently reviewed and verified.</p>
+                <img src="realtor ehp.png" alt="realtor eho logo">
+            </div>
+            
+        </div>
+    </footer>
+    <!-- END - FOOTER -->
+
+    <script src="propertyInfo.js"></script>
+    <script src="searchBar.js"></script>
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Properties</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="searchBar.css">
+    <link rel="stylesheet" href="https://ka-f.webawesome.com/webawesome@3.10.0/styles/themes/default.css">
+    <script type="module" src="https://ka-f.webawesome.com/webawesome@3.10.0/webawesome.loader.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <!-- START - HEADER NAVIGATION BAR -->
+    <header id="headerNav">
+        <div id="headerNavContainer" class="header-nav__container ">
+
+            <a href="homepage.html" class="header-nav__agent-logo">
+                <img src="PJEstates.png" alt="Agent-Logo">
+            </a>
+
+            <input 
+                type="text" 
+                id="searchBar" 
+                class="header-nav__search-bar" 
+                placeholder="Search by address, city or ZIP..."
+            >
+            <div id="searchBarCloseButton"><i class="fa-solid fa-xmark"></i></div>
+
+            <div class="header-nav__btns">
+                <p id="homeSearchBtn" class="header-nav__search-btn header-nav__btn">
+                    Home Search
+                </p>
+
+                <a href="tel:+639208983562" class="header-nav__contact-btn header-nav__btn">
+                    Contact
+                </a>
+            </div>
+
+        </div>
+    </header>
+
+    <div class="searchBarResults" id="results"></div>
+    <!-- END - HEADER NAVIGATION BAR -->
+     
+     <!-- START - HERO SECTION -->
+    <section id="heroOpeningSection" class="hero-opening__container">
+        <div class="hero-opening-text__container">
+            <h1>Properties</h1>
+            <p>Find the perfect property with confidence</p>
+        </div>
+    </section>
+    <!-- END - HERO SECTION -->
+
+    <!-- START - FEATURED PROPERTIES SECTION -->
+    <section id="featuredPropertiesSection">
+        <p class="filters__heading">Filters</p>
+        <div class="property-filters__container">
+            <button name="all listings" id="allListings" class="buttonFilter">
+                All Listings
+            </button>
+            <div class="property-filters-dropdowns__container">
+                <select name="price range" id="priceRange" class="dropdownFilter">
+                     <option class="filter-option" value="" disabled selected hidden>Price Range ⮟</option>
+                    
+                    <option class="filter-option" value="1000000">$1M+</option>
+                    <option class="filter-option" value="750000">$750k - $1M+</option>
+                    <option class="filter-option" value="500000">$500k - $750k</option>
+                    <option class="filter-option" value="250000">$250k - $500k</option>
+                    <option class="filter-option" value="">Reset Price Range</option>
+                </select>
+                <select name="property type" id="propertyType" class="dropdownFilter">
+                     <option class="filter-option" value="" disabled selected hidden>Property Type ⮟</option>
+                    <option class="filter-option" value="Single Family Residence">Single Family</option>
+                    <option class="filter-option" value="Multi-Family Residence">Multi-Family</option>
+                    <option class="filter-option" value="Condos">Condos</option>
+                    <option class="filter-option" value="Apartments">Apartments</option>
+                    <option class="filter-option" value="">Reset Property Type</option>
+                </select>
+                <select name="bedrooms" id="bedrooms" class="dropdownFilter">
+                     <option class="filter-option" value="" disabled selected hidden>Bedrooms ⮟</option>
+                    <option class="filter-option" value="4">4+ Bedrooms</option>
+                    <option class="filter-option" value="3">3 Bedrooms</option>
+                    <option class="filter-option" value="2">2 Bedrooms</option>
+                    <option class="filter-option" value="1">1 Bedroom</option>
+                    <option class="filter-option" value="">Reset Bedrooms</option>
+                </select>
+            </div>
+
+            <div class="property-filters-dropdowns__container">
+                <select name="status" id="status" class="dropdownFilter">
+                     <option class="filter-option" value="" disabled selected hidden>Status ⮟</option>
+                    <option class="filter-option" value="For Sale">For Sale</option>
+                    <option class="filter-option" value="Sold">Sold</option>
+                    <option class="filter-option" value="For Rent">For Rent</option>
+                    <option class="filter-option" value="">Reset Status</option>
+                </select>
+                <select name="sort by" id="sortBy" class="dropdownFilter">
+                     <option class="filter-option" value="" disabled selected hidden>Sort By ⮟</option>
+                    <option class="filter-option" value="Low to High">Price Low to High</option>
+                    <option class="filter-option" value="High to Low">Price High to Low</option>
+                    <option class="filter-option" value="Newest to Oldest">Newest to Oldest</option>
+                    <option class="filter-option" value="Oldest to Newest">Oldest to Newest</option>
+                    <option class="filter-option" value="">Reset Sorting</option>
+                </select>
+            </div>
+            <button name="applyFilters" id="applyFilters" class="buttonFilter applyButton">
+                Apply Filters
+            </button>
+        </div>
+        <div class="choose-filters__btn" id="chooseFilters">Choose Filters</div>
+        <!-- START - MODAL FOR MOBILE VERSION -->
+        <div class="property-filters__modal-container unactive" id="filtersModal">
+            <div class="modal__container">
+                <div id="closeButton"><i class="fa-solid fa-xmark"></i></div>
+                <h3>Filters</h3>
+                <div class="property-filters-dropdowns__container">
+                    <button name="all listings" id="allListingsModal" class="buttonFilter">
+                        All Listings
+                    </button>
+                    <select name="price range" id="priceRangeModal" class="dropdownFilter">
+                        <option class="filter-option" value="" disabled selected hidden>Price Range ⮟</option>
+                        
+                        <option class="filter-option" value="1000000">$1M+</option>
+                        <option class="filter-option" value="750000">$750k - $1M+</option>
+                        <option class="filter-option" value="500000">$500k - $750k</option>
+                        <option class="filter-option" value="250000">$250k - $500k</option>
+                        <option class="filter-option" value="">Reset Price Range</option>
+                    </select>
+                    <select name="property type" id="propertyTypeModal" class="dropdownFilter">
+                        <option class="filter-option" value="" disabled selected hidden>Property Type ⮟</option>
+                        <option class="filter-option" value="Single Family Residence">Single Family</option>
+                        <option class="filter-option" value="Multi-Family Residence">Multi-Family</option>
+                        <option class="filter-option" value="Condos">Condos</option>
+                        <option class="filter-option" value="Apartments">Apartments</option>
+                        <option class="filter-option" value="">Reset Property Type</option>
+                    </select>
+                    <select name="bedrooms" id="bedroomsModal" class="dropdownFilter">
+                        <option class="filter-option" value="" disabled selected hidden>Bedrooms ⮟</option>
+                        <option class="filter-option" value="4">4+ Bedrooms</option>
+                        <option class="filter-option" value="3">3 Bedrooms</option>
+                        <option class="filter-option" value="2">2 Bedrooms</option>
+                        <option class="filter-option" value="1">1 Bedroom</option>
+                        <option class="filter-option" value="">Reset Bedrooms</option>
+                    </select>
+                    <select name="status" id="statusModal" class="dropdownFilter">
+                        <option class="filter-option" value="" disabled selected hidden>Status ⮟</option>
+                        <option class="filter-option" value="For Sale">For Sale</option>
+                        <option class="filter-option" value="Sold">Sold</option>
+                        <option class="filter-option" value="For Rent">For Rent</option>
+                        <option class="filter-option" value="">Reset Status</option>
+                    </select>
+                    <select name="sort by" id="sortByModal" class="dropdownFilter">
+                        <option class="filter-option" value="" disabled selected hidden>Sort By ⮟</option>
+                        <option class="filter-option" value="Low to High">Price Low to High</option>
+                        <option class="filter-option" value="High to Low">Price High to Low</option>
+                        <option class="filter-option" value="Newest to Oldest">Newest to Oldest</option>
+                        <option class="filter-option" value="Oldest to Newest">Oldest to Newest</option>
+                        <option class="filter-option" value="">Reset Sorting</option>
+                    </select>
+                </div>
+
+                <button name="applyFilters" id="applyFiltersModal" class="buttonFilter applyButton">
+                    Apply Filters
+                </button>
+
+            </div>
+        </div>
+        <!-- END - MODAL FOR MOBILE VERSION -->
+        <div class="featured-property__card-container property-list-cards__container" id="cardsContainer">
+
+        </div>
+    </section>
+    <!-- END - FEATURED PROPERTIES SECTION -->
+
+    <!-- START - FOOTER -->
+    <footer id="footerNav">
+        <h3>Peter John Reyes</h3>
+        <div class="footer-contact__details-container">
+            <div class="footer-contact__detail">
+                <p><strong>EMAIL</strong></p>
+                <a href="mailto:peter.john.reyes0326@gmail.com" class="link">peter.john.reyes0326@gmail.com</a>
+            </div>
+            <div class="footer-contact__detail">
+                <p><strong>PHONE</strong></p>
+                <a href="tel:+639208983562" class="link">(+63) 920-898-3562</a>
+            </div>
+            <div class="footer-disclaimer__container">
+                <p>All information is deemed reliable but not guaranteed and should be independently reviewed and verified.</p>
+                <img src="realtor ehp.png" alt="realtor eho logo">
+            </div>
+            
+
+        </div>
+    </footer>
+    <!-- END - FOOTER -->
+
+</body>
+<script type="module" src="propertyPageScript.js"></script>
+<script type="module" src="showProperties.js"></script>
+<script type="module" src="filtersModal.js"></script>
+<script type="module" src="searchBar.js"></script>
+</html>

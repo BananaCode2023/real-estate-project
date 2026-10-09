@@ -363,6 +363,12 @@
             color: var(--dark-text);
             text-decoration: none;
             position: relative;
+
+            @media(max-width: 1400px){
+                min-width: calc(50% - 24px);
+                max-width: calc(50% - 24px);
+                width: calc(50% - 24px);
+            }
             
         .featured-property__image-container{
             height: 220px;
@@ -449,6 +455,7 @@
             max-width: 48%;
         }
     }
+
     @media(max-width: 768px){
         .featured-property__card{
             width: 100% !important;
